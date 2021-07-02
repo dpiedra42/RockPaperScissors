@@ -2,6 +2,7 @@ let computerMove;
 let playerMove;
 let computerScore = 0;
 let playerScore = 0;
+const buttons = document.querySelectorAll('button');
 
 function computerPlay() {
     computerSelection = Math.floor(Math.random()*3);
@@ -23,8 +24,10 @@ function playRound() {
     playerMove = prompt("Choose Your Fighter: Rock, Paper, or Scissors!");
     playerMove = playerMove.toLowerCase();
 
-    if (computerMove == playerMove)
+    if (computerMove == playerMove) {
         console.log("No Winner! It's a tie, try again :)");
+        playRound();
+    }
     else if ((computerMove == "rock" && playerMove == "scissors") ||
              (computerMove == "paper" && playerMove == "rock") ||
              (computerMove == "scissors" && playerMove == "paper")) {
@@ -53,4 +56,4 @@ function game() {
         console.log("no winner!");
 }
 
-game();
+//game();
