@@ -19,10 +19,9 @@ function computerPlay() {
     }
 }
 
-function playRound() {
+function playRound(playerMove) {
     computerPlay();
-    playerMove = prompt("Choose Your Fighter: Rock, Paper, or Scissors!");
-    playerMove = playerMove.toLowerCase();
+    console.log(playerMove);
 
     if (computerMove == playerMove) {
         console.log("No Winner! It's a tie, try again :)");
@@ -44,9 +43,9 @@ function playRound() {
         console.log("you didn't enter a fighter!");
 }
 
-function game() {
+function game(playerMove) {
     for (let i = 0; i < 5; i++) {
-        playRound();
+        playRound(playerMove);
     }
     if (computerScore > playerScore)
         console.log("computer won with a score of " + computerScore + "!");
@@ -56,4 +55,8 @@ function game() {
         console.log("no winner!");
 }
 
-//game();
+buttons.forEach(button => {
+    button.addEventListener("click", function(){
+      game(button.value);
+    })
+  })
