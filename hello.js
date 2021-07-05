@@ -2,40 +2,39 @@ let computerMove;
 let playerMove;
 let computerScore = 0;
 let playerScore = 0;
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.buttons');
 
 function computerPlay() {
     computerSelection = Math.floor(Math.random()*3);
     switch (computerSelection) {
         case (0):
-            computerMove = "rock";
+            computerMove = 'rock';
             break;
         case (1):
-            computerMove = "paper";
+            computerMove = 'paper';
             break;
         case (2):
-            computerMove = "scissors";
+            computerMove = 'scissors';
             break;
     }
 }
 
-function playRound(playerMove) {
+function playRound() {
     computerPlay();
-    console.log(playerMove);
 
     if (computerMove == playerMove) {
         console.log("No Winner! It's a tie, try again :)");
         playRound();
     }
-    else if ((computerMove == "rock" && playerMove == "scissors") ||
-             (computerMove == "paper" && playerMove == "rock") ||
-             (computerMove == "scissors" && playerMove == "paper")) {
+    else if ((computerMove == 'rock' && playerMove == 'scissors') ||
+             (computerMove == 'paper' && playerMove == 'rock') ||
+             (computerMove == 'scissors' && playerMove == 'paper')) {
         computerScore++;
         console.log("Computer wins! " + computerMove + " beats " + playerMove);
     }
-    else if ((playerMove == "rock" && computerMove == "scissors") ||
-             (playerMove == "paper" && computerMove == "rock") ||
-             (playerMove == "scissors" && computerMove == "paper")) {
+    else if ((playerMove == 'rock' && computerMove == 'scissors') ||
+             (playerMove == 'paper' && computerMove == 'rock') ||
+             (playerMove == 'scissors' && computerMove == 'paper')) {
         playerScore++;
         console.log("You won! " + playerMove + " beats " + computerMove);
              }
@@ -43,7 +42,7 @@ function playRound(playerMove) {
         console.log("you didn't enter a fighter!");
 }
 
-function game(playerMove) {
+function game() {
     for (let i = 0; i < 5; i++) {
         playRound(playerMove);
     }
@@ -55,8 +54,12 @@ function game(playerMove) {
         console.log("no winner!");
 }
 
-buttons.forEach(button => {
-    button.addEventListener("click", function(){
-      game(button.value);
-    })
-  })
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const img = button.querySelector("img");
+    playerMove = img.alt.toLowerCase();
+
+    game();
+  });
+});
