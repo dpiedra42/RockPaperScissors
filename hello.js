@@ -1,5 +1,6 @@
 let computerMove;
 let playerMove;
+let round = 0;
 let computerScore = 0;
 let playerScore = 0;
 const buttons = document.querySelectorAll('.buttons');
@@ -23,35 +24,39 @@ function playRound() {
     computerPlay();
 
     if (computerMove == playerMove) {
-        console.log("No Winner! It's a tie, try again :)");
-        playRound();
+        document.getElementById("roundResult").innerHTML = "No Winner! It's a tie, try again :)";
+        round--;
     }
     else if ((computerMove == 'rock' && playerMove == 'scissors') ||
              (computerMove == 'paper' && playerMove == 'rock') ||
              (computerMove == 'scissors' && playerMove == 'paper')) {
         computerScore++;
-        console.log("Computer wins! " + computerMove + " beats " + playerMove);
+        document.getElementById("roundResult").innerHTML = "Computer wins, " + computerMove + " beats " + playerMove + "!";
     }
     else if ((playerMove == 'rock' && computerMove == 'scissors') ||
              (playerMove == 'paper' && computerMove == 'rock') ||
              (playerMove == 'scissors' && computerMove == 'paper')) {
         playerScore++;
-        console.log("You won! " + playerMove + " beats " + computerMove);
+        document.getElementById("roundResult").innerHTML = "You won, " + playerMove + " beats " + computerMove + "!";
              }
     else 
-        console.log("you didn't enter a fighter!");
+        document.getElementById("roundResult").innerHTML = "You didn't enter a fighter!";
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-        playRound(playerMove);
+    playRound();
+    round++;
+    if (round == 5){
+        if (computerScore > playerScore)
+            document.getElementById("roundResult").innerHTML = "Computer won with a score of " + computerScore + "!";
+        else if (playerScore > computerScore)
+            document.getElementById("roundResult").innerHTML = "You won with a score of " + playerScore + "!";
+        else
+            document.getElementById("roundResult").innerHTML = "No winner!";
+        document.getElementById("tryAgain").innerHTML = "If you want to play again refresh the page :)";
+        
+
     }
-    if (computerScore > playerScore)
-        console.log("computer won with a score of " + computerScore + "!");
-    else if (playerScore > computerScore)
-        console.log("you won with a score of " + playerScore + "!");
-    else
-        console.log("no winner!");
 }
 
 
