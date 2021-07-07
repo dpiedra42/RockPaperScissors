@@ -23,7 +23,7 @@ function computerPlay() {
 function playRound() {
     computerPlay();
 
-    document.getElementById("compSel").innerHTML = computerMove +  "!";
+    document.getElementById("compSel").innerHTML = computerMove.toUpperCase();
     if (computerMove == playerMove) {
         document.getElementById("roundResult").innerHTML = "No Winner! It's a tie, try again :)";
         round--;
@@ -48,7 +48,8 @@ function game() {
     playRound();
 
     round++;
-    document.getElementById("roundNumber").innerHTML = "Round:" + round;
+    document.getElementById("roundNumber").innerHTML = "Round: " + round;
+    document.getElementById("tryAgain").innerHTML = "You: " + playerScore + " Computer: " + computerScore;
     if (round == 5){
         if (computerScore > playerScore)
             document.getElementById("roundResult").innerHTML = "Computer won with a score of " + computerScore + "!";
@@ -56,9 +57,7 @@ function game() {
             document.getElementById("roundResult").innerHTML = "You won with a score of " + playerScore + "!";
         else
             document.getElementById("roundResult").innerHTML = "No winner!";
-        document.getElementById("tryAgain").innerHTML = "If you want to play again refresh the page :)";
-        
-
+        // document.getElementById("tryAgain").innerHTML = "If you want to play again refresh the page :)";
     }
 }
 
