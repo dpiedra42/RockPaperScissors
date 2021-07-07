@@ -8,36 +8,38 @@
 </head>
 <body>
     <header>
-        Welcome to <mark class="purple">&nbspRock</mark><mark class="blue">&nbspPaper</mark><mark class="green">&nbspScissors</mark>!
-    </header>
-    <div>
+        <h1>
+            Welcome to&nbsp<mark class="purple">Rock</mark>&nbsp<mark class="blue">Paper</mark>&nbsp<mark class="green">Scissors</mark>!
+        </h1>
         <p class = "howTo">
-            Three friendly options | 5 chances | May the odds be in your favor!
+            Three friendly options and 5 chances to win
         </p>
-    </div>
-    <div>
-        <p class="rules">
-            <mark class="blue">Paper&nbsp</mark>beats<mark class="purple">&nbspRock&nbsp</mark>| <mark class="green">&nbspScissors&nbsp</mark> beats<mark class="blue">&nbspPaper</mark> |<mark class="purple">&nbspRock&nbsp</mark> beats<mark class="green">&nbspScissors&nbsp</mark>
-        </p>
-    </div>
-    <div class="weaponChoice">
-        <button class="buttons">
-            <img src="https://freepikpsd.com/media/2019/10/cartoon-rock-png-3-Transparent-Images.png" alt="Rock">
-        </button>
-        <button class="buttons">
-            <img src="https://freepikpsd.com/media/2019/10/cartoon-paper-png-7-Transparent-Images.png" alt="Paper">
-        </button>
-        <button class="buttons">
-            <img src="https://i.pinimg.com/originals/de/d7/34/ded734058afb08d065830124d3d97a54.png" alt="Scissors">
-        </button>
-    </div>
+        <div class="rules">
+            <p>|<mark class="blue">Paper&nbsp</mark>beats<mark class="purple">&nbspRock&nbsp</mark>|</p>
+            <p>|<mark class="green">&nbspScissors&nbsp</mark> beats<mark class="blue">&nbspPaper</mark> |</p>
+            <p>|<mark class="purple">&nbspRock&nbsp</mark> beats<mark class="green">&nbspScissors&nbsp</mark>|</p>
+        </div>
+    </header>
+    <main>
+        <div class="weaponChoice">
+            <button class="buttons">
+                <img src="https://freepikpsd.com/media/2019/10/cartoon-rock-png-3-Transparent-Images.png" alt="Rock">
+            </button>
+            <button class="buttons">
+                <img src="https://freepikpsd.com/media/2019/10/cartoon-paper-png-7-Transparent-Images.png" alt="Paper">
+            </button>
+            <button class="buttons">
+                <img src="https://i.pinimg.com/originals/de/d7/34/ded734058afb08d065830124d3d97a54.png" alt="Scissors">
+            </button>
+        </div>
+        <div>
+            <p id="roundResult"></p>
+        </div>
+        <div>
+            <p id="tryAgain"></p>
+        </div>
+    </main>
     <script src="hello.js">
     </script>
-    <div>
-        <p id="roundResult"></p>
-    </div>
-    <div>
-        <p id="tryAgain"></p>
-    </div>
 </body>
 </html>
