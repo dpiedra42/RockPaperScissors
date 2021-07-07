@@ -1,16 +1,16 @@
 html {
     background-color: pink;
+    line-height: 1.5;
 }
 
 header {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     font-size: 45px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #F567CC;
     opacity: 0.8;
-    margin-bottom: 50px;
-    margin-top: 50px;
 }
 
 mark.purple {
@@ -31,6 +31,7 @@ mark.green {
 .howTo {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 22px;
     color: #E6F3F0;
@@ -40,6 +41,7 @@ mark.green {
 .rules {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 18px;
     color: #E6F3F0;
@@ -57,6 +59,7 @@ mark.green {
 .weaponChoice {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     border-style: solid;
     border-color: #E6F3F0;
     opacity: 0.8;
@@ -72,6 +75,7 @@ img {
 #roundResult {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     color: #F567CC;
     opacity: 0.8;
 }
@@ -79,6 +83,7 @@ img {
 #tryAgain {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     color: #F567CC;
     opacity: 0.8;
 }
