@@ -74,8 +74,7 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     border: 4px solid #E6F3F0;
-    border-radius: 5px;
-    /* width: 50%; */
+    border-radius: 15px;
     opacity: 0.8;
 }
 
@@ -84,18 +83,67 @@ img {
     width: 80px;
 }
 
+img:hover {
+    background-color: lavender;
+    border-radius: 15px;
+}
+
+.gameSummary{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.compBox {
+    border: 4px solid #E6F3F0;
+    padding: 5px;
+}
+
+#computerMove {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #F567CC;
+    opacity: 0.8;
+    margin-right: 0px;
+}
+
+#compSel {
+    display: flex;
+    justify-content: center;
+    color: #F567CC;
+    opacity: 0.8;
+}
+
+.result {
+    border: 4px solid #E6F3F0;
+    border-left: 0px;
+    padding: 5px;
+}
+
+#roundNumber {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    color: #F567CC;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
 #roundResult {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     color: #F567CC;
+    font-size: 18px;
     opacity: 0.8;
 }
 
 #tryAgain {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     color: #F567CC;
+    font-size: 18px;
     opacity: 0.8;
 }

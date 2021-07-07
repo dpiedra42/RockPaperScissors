@@ -23,6 +23,7 @@ function computerPlay() {
 function playRound() {
     computerPlay();
 
+    document.getElementById("compSel").innerHTML = computerMove +  "!";
     if (computerMove == playerMove) {
         document.getElementById("roundResult").innerHTML = "No Winner! It's a tie, try again :)";
         round--;
@@ -45,7 +46,9 @@ function playRound() {
 
 function game() {
     playRound();
+
     round++;
+    document.getElementById("roundNumber").innerHTML = "Round:" + round;
     if (round == 5){
         if (computerScore > playerScore)
             document.getElementById("roundResult").innerHTML = "Computer won with a score of " + computerScore + "!";

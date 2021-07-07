@@ -17,9 +17,15 @@
             Three friendly options and 5 chances to win
         </p>
         <div class="rules">
-            <p>|<mark class="blue"> Paper </mark>beats<mark class="purple"> Rock </mark>|</p>
-            <p>|<mark class="green"> Scissors </mark> beats<mark class="blue"> Paper</mark> |</p>
-            <p>|<mark class="purple"> Rock</mark> beats<mark class="green"> Scissors </mark>|</p>
+            <p>
+                |<mark class="blue"> Paper </mark>beats<mark class="purple"> Rock </mark>|
+            </p>
+            <p>
+                |<mark class="green"> Scissors </mark> beats<mark class="blue"> Paper</mark> |
+            </p>
+            <p>
+                |<mark class="purple"> Rock</mark> beats<mark class="green"> Scissors </mark>|
+            </p>
         </div>
     </header>
     <main>
@@ -35,11 +41,24 @@
             </button>
         </div>
     </main>
-    <div>
-       <p id="roundResult"></p>
-    </div>
-    <div>
-        <p id="tryAgain"></p>
+    <div class="gameSummary">
+        <div class="compBox">
+            <p id="computerMove">
+                Computer chose: &nbsp
+                <p id="compSel"></p>
+            </p>
+        </div>
+        <div class="result">
+            <p id="roundNumber">
+                Round: 0
+            </p>
+            <p id="roundResult">
+                Battle has not begun :)
+            </p>
+            <p id="tryAgain">
+                score: 0 &nbsp  0
+            </p>
+        </div>
     </div>
     <script src="hello.js">
     </script>
