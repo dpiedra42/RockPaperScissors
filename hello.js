@@ -5,6 +5,10 @@ let computerScore = 0;
 let playerScore = 0;
 const buttons = document.querySelectorAll('.buttons');
 
+function refreshPage() {
+    window.location.reload();
+}
+
 function putImage() {
     var img = document.createElement("img");
 
@@ -82,7 +86,8 @@ function game() {
             document.getElementById("roundResult").innerHTML = "You won with a score of " + playerScore + "!";
         else
             document.getElementById("roundResult").innerHTML = "No winner!";
-        // document.getElementById("scoreBoard").innerHTML = "If you want to play again refresh the page :)";
+        document.getElementById("weapons").style.display = "none";
+        document.getElementById("tryAgain").innerHTML = '<button id="pressMe" onClick="refreshPage()">Press me to play again! :)</button>';
     }
 }
 
