@@ -140,7 +140,7 @@ img:hover {
     opacity: 0.8;
 }
 
-#tryAgain {
+#scoreBoard {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
