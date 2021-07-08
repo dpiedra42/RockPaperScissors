@@ -78,7 +78,7 @@ function game() {
 
     round++;
     document.getElementById("roundNumber").innerHTML = "Round: " + round;
-    document.getElementById("scoreBoard").innerHTML = "You: " + playerScore + " Computer: " + computerScore;
+    document.getElementById("scoreBoard").innerHTML = "You: " + playerScore + "&nbsp&nbsp Computer: " + computerScore;
     if (round == 5){
         if (computerScore > playerScore)
             document.getElementById("roundResult").innerHTML = "Computer won with a score of " + computerScore + "!";
