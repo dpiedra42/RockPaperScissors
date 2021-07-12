@@ -5,10 +5,12 @@ let computerScore = 0;
 let playerScore = 0;
 const buttons = document.querySelectorAll('.buttons');
 
+//refreshes the page so you can start playing a new game
 function refreshPage() {
     window.location.reload();
 }
 
+//displays the computer's choice on the screen
 function putImage() {
     var img = document.createElement("img");
 
@@ -33,6 +35,7 @@ function putImage() {
     document.getElementById("compSel").appendChild(img);
 }
 
+//randomly chooses 0, 1, or 2 which I have assigned rock, paper, and scissors to respectively.
 function computerPlay() {
     computerSelection = Math.floor(Math.random()*3);
     switch (computerSelection) {
@@ -48,6 +51,9 @@ function computerPlay() {
     }
 }
 
+//Starts off by getting the computer's choice, displays that choice, and then it plays the game.
+//Then, I include conditions to compare computer and players move to decide who won, or if it's a
+//tie. Finally, I display the results of the round.
 function playRound() {
     computerPlay();
     document.getElementById("compSel").innerHTML = "";
@@ -73,6 +79,9 @@ function playRound() {
         document.getElementById("roundResult").innerHTML = "You didn't enter a fighter!";
 }
 
+//in this function I included a counter to know when i have done 5 rounds. The score
+//is also displayed after each round is complete. When i have reached 5, the final score is displayed
+//and then the button to refresh the page pops up at the same time the weapon choices are hidden.
 function game() {
     playRound();
 
@@ -91,7 +100,7 @@ function game() {
     }
 }
 
-
+//This function assigns the weapon the player clicked on to my variable PlayerMove.
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const img = button.querySelector("img");
